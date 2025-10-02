@@ -30,11 +30,16 @@ export default function Home() {
             <section className="pt-32 pb-16 px-6">
                 <div className="max-w-7xl mx-auto">
                     <div className="text-center mb-16">
-                        <h1 className="text-5xl md:text-7xl font-light tracking-wide mb-6 dark:text-white">
+                        <h1
+                            className="text-5xl md:text-7xl font-light tracking-wide mb-6 dark:text-white"
+                            style={{
+                                fontFamily:
+                                    'Old English Text MT, Times New Roman, serif',
+                            }}>
                             Celestial Stained Glass
                         </h1>
                         <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300 font-light max-w-2xl mx-auto">
-                            Specializing in traditional English styles,
+                            Specialising in traditional English styles,
                             Victorian, Edwardian, Art Deco, 1930s, 1940s and
                             contemporary designs.
                         </p>
@@ -100,12 +105,22 @@ export default function Home() {
                         Get in Touch
                     </h2>
                     <div className="space-y-4 text-lg text-gray-600 dark:text-gray-300">
-                        <p>
+                        {/* <p>
                             <span className="font-light">Email:</span>{' '}
                             <a
                                 href="mailto:hello@celestialstainedglass.co.uk"
                                 className="hover:text-gray-900 dark:hover:text-white transition-colors">
                                 hello@celestialstainedglass.co.uk
+                            </a>
+                        </p> */}
+                        <p>
+                            <span className="font-light">Instagram:</span>{' '}
+                            <a
+                                href="https://www.instagram.com/celestialstainedglass/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="hover:text-gray-900 dark:hover:text-white transition-colors">
+                                @celestialstainedglass
                             </a>
                         </p>
                         <p>
@@ -117,7 +132,7 @@ export default function Home() {
                             </a>
                         </p>
                         <p className="text-sm text-gray-500 dark:text-gray-400 mt-6">
-                            Available for commissions and custom projects
+                            Call for a free quote on any size job.
                         </p>
                     </div>
                 </div>

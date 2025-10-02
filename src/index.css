@@ -1,5 +1,13 @@
 @import 'tailwindcss';
 
+@font-face {
+    font-family: 'Old English Text MT';
+    src: url('/fonts/oldenglishtextmt.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
 /* Dark mode body styles */
 .dark body {
     color: #f9fafb;

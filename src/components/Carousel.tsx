@@ -87,19 +87,19 @@ export function Carousel({
 
                 {/* 6. Navigation Buttons */}
                 <EmblaCarouselButton
-                    className="left-4 top-1/2 -translate-y-1/2"
+                    className="left-4 top-1/2 -translate-y-1/2 cursor-pointer"
                     onClick={scrollPrev}>
                     ←
                 </EmblaCarouselButton>
                 <EmblaCarouselButton
-                    className="right-4 top-1/2 -translate-y-1/2"
+                    className="right-4 top-1/2 -translate-y-1/2 cursor-pointer"
                     onClick={scrollNext}>
                     →
                 </EmblaCarouselButton>
 
                 {/* 7. Close Button */}
                 <button
-                    className="absolute top-4 right-4 text-white text-3xl hover:text-gray-300 transition-colors"
+                    className="absolute top-4 right-4 text-white text-3xl hover:text-gray-300 transition-colors cursor-pointer"
                     onClick={handleClose}
                     aria-label="Close Gallery">
                     &times;
