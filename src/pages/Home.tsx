@@ -31,14 +31,14 @@ export default function Home() {
                 <div className="max-w-7xl mx-auto">
                     <div className="text-center mb-16">
                         <h1
-                            className="text-5xl md:text-7xl font-light tracking-wide mb-6 dark:text-white"
+                            className="text-5xl md:text-7xl font-light tracking-wide mb-6 dark:text-[rgb(84,24,24)]"
                             style={{
                                 fontFamily:
                                     'Old English Text MT, Times New Roman, serif',
                             }}>
                             Celestial Stained Glass
                         </h1>
-                        <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300 font-light max-w-2xl mx-auto">
+                        <p className="text-lg md:text-xl text-gray-600 dark:text-white font-light max-w-2xl mx-auto">
                             Specialising in traditional English styles,
                             Victorian, Edwardian, Art Deco, 1930s, 1940s and
                             contemporary designs.
@@ -64,10 +64,10 @@ export default function Home() {
                                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                                     />
                                 </div>
-                                <h3 className="text-xl font-light mb-2 dark:text-white">
+                                <h3 className="text-xl font-light mb-2 dark:text-[rgba(84,24,24)]">
                                     {work.title}
                                 </h3>
-                                <p className="text-sm text-gray-500 dark:text-gray-400">
+                                <p className="text-sm text-gray-500 dark:text-white">
                                     {work.description}
                                 </p>
                             </div>
@@ -101,7 +101,7 @@ export default function Home() {
             {/* Contact Section */}
             <section className="py-16 px-6">
                 <div className="max-w-4xl mx-auto text-center">
-                    <h2 className="text-3xl md:text-4xl font-light mb-8 dark:text-white">
+                    <h2 className="text-3xl md:text-4xl font-light mb-8 dark:text-[rgba(84,24,24)]">
                         Get in Touch
                     </h2>
                     <div className="space-y-4 text-lg text-gray-600 dark:text-gray-300">
@@ -116,7 +116,7 @@ export default function Home() {
                         <p>
                             <span className="font-light">Instagram:</span>{' '}
                             <a
-                                href="https://www.instagram.com/celestialstainedglass/"
+                                href="https://www.instagram.com/celestialstainedglass"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="hover:text-gray-900 dark:hover:text-white transition-colors">

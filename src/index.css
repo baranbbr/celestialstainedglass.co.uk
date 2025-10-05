@@ -10,8 +10,8 @@
 
 /* Dark mode body styles */
 .dark body {
-    color: #f9fafb;
-    background-color: #111827;
+    color: rgb(84, 24, 24);
+    background-color: #c8c8af;
 }
 
 /* Custom animations */

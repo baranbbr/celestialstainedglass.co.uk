@@ -5,7 +5,7 @@ import Gallery from './pages/Gallery';
 
 function App() {
     return (
-        <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors">
+        <div className="min-h-screen bg-white dark:bg-[rgb(200,200,175)] transition-colors">
             <Navigation />
             <Routes>
                 <Route path="/" element={<Home />} />
