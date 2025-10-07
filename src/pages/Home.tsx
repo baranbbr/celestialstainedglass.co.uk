@@ -89,9 +89,6 @@ export default function Home() {
             {/* About Section */}
             <section className="py-16 px-6 bg-gray-50 dark:bg-gray-800 transition-colors">
                 <div className="max-w-4xl mx-auto text-center">
-                    <h2 className="text-3xl md:text-4xl font-light mb-6 dark:text-white">
-                        About the Artist
-                    </h2>
                     <p className="text-lg text-gray-600 dark:text-gray-300 font-light leading-relaxed mb-8">
                         With over a decade of experience in traditional stained
                         glass techniques, each piece is carefully crafted to
