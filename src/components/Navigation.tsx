@@ -2,7 +2,9 @@ import { Link, useLocation } from 'react-router-dom';
 
 export default function Navigation() {
     const location = useLocation();
-    const currentPage = location.pathname === '/gallery' ? 'gallery' : 'home';
+    const currentPage = location.pathname.includes('/gallery')
+        ? 'gallery'
+        : 'home';
 
     return (
         <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-[rgb(200,200,175)]/80 backdrop-blur-sm transition-colors">
