@@ -1,24 +1,27 @@
 import { Carousel } from '../components/Carousel';
 import { useState } from 'react';
+import Image1 from '/glass/A7153D65-E9B9-4821-BE63-E2D51E5E6F2E.jpeg';
+import Image2 from '/glass/36519E40-2771-40BD-9081-3E5F0F66500E.jpeg';
+import Image3 from '/glass/7EA66149-7A57-402D-8471-2BDA24F26A44.jpeg';
 
 export default function Home() {
     const featuredWorks = [
         {
             id: 1,
             title: 'Aurora Window',
-            image: 'https://images.unsplash.com/photo-1582555172866-f73bb12a2ab3?w=800&q=80',
+            image: Image1,
             description: 'Contemporary stained glass design',
         },
         {
             id: 2,
             title: 'Sacred Geometry',
-            image: 'https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=800&q=80',
+            image: Image2,
             description: 'Traditional craftsmanship meets modern art',
         },
         {
             id: 3,
             title: 'Light Prism',
-            image: 'https://images.unsplash.com/photo-1541961017774-22349e4a1262?w=800&q=80',
+            image: Image3,
             description: 'Playing with color and light',
         },
     ];
