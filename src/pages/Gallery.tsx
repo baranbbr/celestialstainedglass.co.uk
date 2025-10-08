@@ -5,8 +5,9 @@ import { Carousel } from '../components/Carousel';
 const images: string[] = galleryImages as string[];
 export default function Gallery() {
     // Map filenames to gallery item objects
+    const base = import.meta.env.BASE_URL || '/';
     const galleryItems = images.map((filename: string) => ({
-        image: `/glass/${filename}`,
+        image: `${base}glass/${filename}`,
         title: filename,
     }));
     console.log('Gallery items:', galleryItems);
