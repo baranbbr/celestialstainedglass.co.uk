@@ -17,11 +17,7 @@ const EmblaCarouselButton = ({
     </button>
 );
 
-export function Carousel({
-    featuredWorks,
-    closeGallery,
-    initialSlide = 0,
-}: any) {
+export function Carousel({ images, closeGallery, initialSlide = 0 }: any) {
     const [emblaRef, emblaApi] = useEmblaCarousel({
         loop: true,
         align: 'center',
@@ -68,20 +64,25 @@ export function Carousel({
                 <div className="overflow-hidden h-full" ref={emblaRef}>
                     {/* 4. Embla Container (Handles the sliding) */}
                     <div className="flex h-full">
-                        {featuredWorks.map((item: any) => (
-                            // 5. Embla Slide
-                            <div
-                                className="embla__slide flex-shrink-0 w-full h-full min-w-0 px-2"
-                                key={item.id}>
-                                <div className="flex justify-center items-center h-full">
-                                    <img
-                                        src={item.image}
-                                        alt={item.description}
-                                        className="max-h-full max-w-full object-contain shadow-2xl rounded-lg"
-                                    />
+                        {images.map(
+                            (
+                                item: { image: string; title: string },
+                                index: number
+                            ) => (
+                                // 5. Embla Slide
+                                <div
+                                    className="embla__slide flex-shrink-0 w-full h-full min-w-0 px-2"
+                                    key={`slide-${index}-${item.title}`}>
+                                    <div className="flex justify-center items-center h-full">
+                                        <img
+                                            src={item.image}
+                                            alt={item.title}
+                                            className="max-h-full max-w-full object-contain shadow-2xl rounded-lg"
+                                        />
+                                    </div>
                                 </div>
-                            </div>
-                        ))}
+                            )
+                        )}
                     </div>
                 </div>
 

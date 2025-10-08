@@ -7,22 +7,22 @@ import Image3 from '/glass/7EA66149-7A57-402D-8471-2BDA24F26A44.jpeg';
 export default function Home() {
     const featuredWorks = [
         {
-            id: 1,
             title: 'Aurora Window',
             image: Image1,
-            description: 'Contemporary stained glass design',
+            description:
+                'A beautiful stained glass window depicting the Aurora Borealis.',
         },
         {
-            id: 2,
             title: 'Sacred Geometry',
             image: Image2,
-            description: 'Traditional craftsmanship meets modern art',
+            description:
+                'An intricate design based on sacred geometric patterns.',
         },
         {
-            id: 3,
             title: 'Light Prism',
             image: Image3,
-            description: 'Playing with color and light',
+            description:
+                'A stunning display of light and colour through glass.',
         },
     ];
     const [isGalleryOpen, setIsGalleryOpen] = useState(false);
@@ -55,11 +55,13 @@ export default function Home() {
                     {/* Featured Works Grid */}
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
                         {featuredWorks.map((work, index) => (
-                            <div key={work.id} className="group cursor-pointer">
+                            <div
+                                key={work.title}
+                                className="group cursor-pointer">
                                 <div className="aspect-[3/4] overflow-hidden bg-gray-100 dark:bg-gray-800 mb-4">
                                     <img
                                         src={work.image}
-                                        alt={work.description}
+                                        alt={work.title}
                                         onClick={() => {
                                             setInitialSlideIndex(index);
                                             setIsGalleryOpen(true);
@@ -70,7 +72,7 @@ export default function Home() {
                                 <h3 className="text-xl font-light mb-2 dark:text-[rgba(84,24,24)]">
                                     {work.title}
                                 </h3>
-                                <p className="text-sm text-gray-500 dark:text-white">
+                                <p className="text-gray-600 dark:text-gray-300 font-light text-sm dark:text-white">
                                     {work.description}
                                 </p>
                             </div>
@@ -79,7 +81,7 @@ export default function Home() {
                 </div>
                 {isGalleryOpen && (
                     <Carousel
-                        featuredWorks={featuredWorks}
+                        images={featuredWorks}
                         closeGallery={() => setIsGalleryOpen(false)}
                         initialSlide={initialSlideIndex}
                     />
@@ -87,9 +89,9 @@ export default function Home() {
             </section>
 
             {/* About Section */}
-            <section className="py-16 px-6 bg-gray-50 dark:bg-gray-800 transition-colors">
+            <section className="py-16 px-6 bg-gray-50 dark:bg-[rgb(200,185,175)] transition-colors">
                 <div className="max-w-4xl mx-auto text-center">
-                    <p className="text-lg text-gray-600 dark:text-gray-300 font-light leading-relaxed mb-8">
+                    <p className="text-lg text-gray-600 dark:text-white font-light leading-relaxed mb-8">
                         With over a decade of experience in traditional stained
                         glass techniques, each piece is carefully crafted to
                         capture and transform natural light into breathtaking
@@ -114,24 +116,28 @@ export default function Home() {
                             </a>
                         </p> */}
                         <p>
-                            <span className="font-light">Instagram:</span>{' '}
+                            <span className="font-light dark:text-white">
+                                Instagram:
+                            </span>{' '}
                             <a
                                 href="https://www.instagram.com/celestialstainedglass"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="hover:text-gray-900 dark:hover:text-white transition-colors">
+                                className="hover:text-gray-900 dark:text-white dark:hover:text-gray-100 transition-colors">
                                 @celestialstainedglass
                             </a>
                         </p>
                         <p>
-                            <span className="font-light">Phone:</span>{' '}
+                            <span className="font-light dark:text-white">
+                                Phone:
+                            </span>{' '}
                             <a
                                 href="tel:+447879445112"
-                                className="hover:text-gray-900 dark:hover:text-white transition-colors">
+                                className="hover:text-gray-900 dark:text-white dark:hover:text-gray-100 transition-colors">
                                 07879 445 112
                             </a>
                         </p>
-                        <p className="text-sm text-gray-500 dark:text-gray-400 mt-6">
+                        <p className="text-sm text-gray-500 dark:text-white mt-6">
                             Call for a free quote on any size job.
                         </p>
                     </div>
