@@ -33,7 +33,7 @@ export default function Home() {
                 <div className="max-w-7xl mx-auto">
                     <div className="text-center mb-16">
                         <h1
-                            className="text-5xl md:text-7xl font-light tracking-wide mb-6 dark:text-[rgb(84,24,24)]"
+                            className="text-5xl md:text-7xl font-light tracking-wide mb-6 text-[rgb(84,24,24)]"
                             style={{
                                 fontFamily:
                                     'Old English Text MT, Times New Roman, serif',
@@ -46,7 +46,7 @@ export default function Home() {
                             contemporary designs.
                         </p>
                         {/* bold words */}
-                        <span className="font-bold">
+                        <span className="font-bold text-[rgb(84,24,24)]">
                             DESIGN, FABRICATION, RESTORATION, INSTALLATION
                         </span>
                     </div>
@@ -68,7 +68,7 @@ export default function Home() {
                                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                                     />
                                 </div>
-                                <h3 className="text-xl font-light mb-2 dark:text-[rgba(84,24,24)]">
+                                <h3 className="text-xl font-light mb-2 text-[rgb(84,24,24)]">
                                     {work.title}
                                 </h3>
                                 <p className="text-gray-600 font-light text-sm dark:text-white">
@@ -88,7 +88,7 @@ export default function Home() {
             </section>
 
             {/* About Section */}
-            <section className="py-16 px-6 bg-gray-50 dark:bg-[#b3b38b] transition-colors">
+            <section className="py-16 px-6 bg-gray-100 dark:bg-[#b3b38b] transition-colors">
                 <div className="max-w-4xl mx-auto text-center">
                     <p className="text-lg text-gray-600 dark:text-white font-light leading-relaxed">
                         With over a decade of experience in traditional stained
@@ -102,10 +102,10 @@ export default function Home() {
             {/* Contact Section */}
             <section className="py-16 md:px-6">
                 <div className="md:flex md:flex-col md:items-center md:mx-auto">
-                    <h2 className="text-3xl md:text-4xl text-center font-light mb-8 dark:text-[#541818]">
+                    <h2 className="text-3xl md:text-4xl text-center font-light mb-8 text-[#541818]">
                         Get in Touch
                     </h2>
-                    <div className="bg-gray-100 dark:bg-[#b3b38b]/80 p-8 flex flex-col gap-4 md:rounded-2xl md:shadow-xl items-center">
+                    <div className="bg-gray-100 dark:bg-[#b3b38b]/80 p-8 flex flex-col gap-4 md:rounded-2xl md:shadow-xl items-center text-[rgb(84,24,24)]">
                         <div className="flex items-center gap-4 w-full max-w-md">
                             {/* Instagram Icon */}
                             <span className="inline-flex items-center justify-center w-8 h-8">

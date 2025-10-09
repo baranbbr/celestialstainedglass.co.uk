@@ -12,7 +12,7 @@ export default function Navigation() {
                 <div className="md:flex md:items-center md:justify-between">
                     <Link
                         to="/"
-                        className="hidden md:inline text-xl font-light tracking-wider hover:opacity-70 transition-opacity dark:text-white"
+                        className="hidden md:inline text-xl font-light tracking-wider hover:opacity-70 transition-opacity dark:text-white text-[rgb(84,24,24)]"
                         style={{
                             fontFamily:
                                 'Old English Text MT, Times New Roman, serif',
