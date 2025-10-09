@@ -80,7 +80,10 @@ export default function Home() {
                 </div>
                 {isGalleryOpen && (
                     <Carousel
-                        images={featuredWorks}
+                        images={featuredWorks.map((work) => ({
+                            image: work.image,
+                            caption: work.title,
+                        }))}
                         closeGallery={() => setIsGalleryOpen(false)}
                         initialSlide={initialSlideIndex}
                     />
