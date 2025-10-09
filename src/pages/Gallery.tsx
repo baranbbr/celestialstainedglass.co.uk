@@ -19,7 +19,7 @@ export default function Gallery() {
             <div className="max-w-7xl mx-auto">
                 <div className="text-center mb-12">
                     <h1
-                        className="text-4xl md:text-7xl font-light tracking-wide mb-6 dark:text-[rgb(84,24,24)]"
+                        className="text-4xl md:text-7xl font-light tracking-wide mb-6 text-[rgb(84,24,24)]"
                         style={{
                             fontFamily:
                                 'Old English Text MT, Times New Roman, serif',
