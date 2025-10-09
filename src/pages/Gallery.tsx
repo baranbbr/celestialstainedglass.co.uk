@@ -1,14 +1,15 @@
 import { useState } from 'react';
-import galleryImages from '../data/galleryImages.json';
+import galleryImages from '../data/manual.json';
 import { Carousel } from '../components/Carousel';
 
-const images: string[] = galleryImages as string[];
+type GalleryImage = { image: string; caption: string };
+const images: GalleryImage[] = galleryImages as GalleryImage[];
 export default function Gallery() {
-    // Map filenames to gallery item objects
+    // Map gallery image objects to gallery item objects
     const base = import.meta.env.BASE_URL || '/';
-    const galleryItems = images.map((filename: string) => ({
-        image: `${base}glass/${filename}`,
-        title: filename,
+    const galleryItems = images.map((img: GalleryImage) => ({
+        image: `${base}glass/${img.image}`,
+        caption: img.caption,
     }));
     console.log('Gallery items:', galleryItems);
 
@@ -43,7 +44,7 @@ export default function Gallery() {
                             <div className="aspect-[3/4] overflow-hidden bg-gray-100 dark:bg-gray-800 mb-4">
                                 <img
                                     src={item.image}
-                                    alt={item.title}
+                                    alt={item.caption}
                                     onClick={() => {
                                         setInitialSlideIndex(index);
                                         setIsGalleryOpen(true);
@@ -57,11 +58,13 @@ export default function Gallery() {
                                     loading="lazy"
                                 />
                             </div>
-                            {/* <div className="mt-4">
+                            {item.caption && (
+                                <div className="mt-4">
                                     <h3 className="text-lg font-light dark:text-white">
-                                        {item.title}
+                                        {item.caption}
                                     </h3>
-                                </div> */}
+                                </div>
+                            )}
                         </div>
                     ))}
                 </div>

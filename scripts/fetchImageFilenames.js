@@ -24,7 +24,11 @@ function main() {
     const files = fs
         .readdirSync(glassDir)
         .filter((f) => exts.includes(path.extname(f).toLowerCase()));
-    fs.writeFileSync(outputFile, JSON.stringify(files, null, 2));
+    const imagesWithCaptions = files.map((filename) => ({
+        image: filename,
+        caption: '',
+    }));
+    fs.writeFileSync(outputFile, JSON.stringify(imagesWithCaptions, null, 2));
     console.log(`Wrote ${files.length} image filenames to`, outputFile);
 }
 
