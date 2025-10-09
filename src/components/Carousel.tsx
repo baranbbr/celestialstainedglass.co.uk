@@ -17,7 +17,15 @@ const EmblaCarouselButton = ({
     </button>
 );
 
-export function Carousel({ images, closeGallery, initialSlide = 0 }: any) {
+export function Carousel({
+    images,
+    closeGallery,
+    initialSlide = 0,
+}: {
+    images: GalleryImage[];
+    closeGallery: () => void;
+    initialSlide?: number;
+}) {
     const [emblaRef, emblaApi] = useEmblaCarousel({
         loop: true,
         align: 'center',
@@ -58,31 +66,31 @@ export function Carousel({ images, closeGallery, initialSlide = 0 }: any) {
             onClick={handleClose}>
             {/* 2. Main Carousel Area (Prevent clicks from closing the gallery) */}
             <div
-                className="relative w-full max-w-5xl aspect-[3/2] mx-auto"
+                className="relative w-full max-w-5xl mx-auto"
                 onClick={(e) => e.stopPropagation()}>
                 {/* 3. Embla Viewport */}
-                <div className="overflow-hidden h-full" ref={emblaRef}>
+                <div className="overflow-hidden" ref={emblaRef}>
                     {/* 4. Embla Container (Handles the sliding) */}
-                    <div className="flex h-full">
-                        {images.map(
-                            (
-                                item: { image: string; title: string },
-                                index: number
-                            ) => (
-                                // 5. Embla Slide
-                                <div
-                                    className="embla__slide flex-shrink-0 w-full h-full min-w-0 px-2"
-                                    key={`slide-${index}-${item.title}`}>
-                                    <div className="flex justify-center items-center h-full">
-                                        <img
-                                            src={item.image}
-                                            alt={item.title}
-                                            className="max-h-full max-w-full object-contain shadow-2xl rounded-lg"
-                                        />
+                    <div className="flex">
+                        {images.map((item: GalleryImage, index: number) => (
+                            // 5. Embla Slide
+                            <div
+                                className="embla__slide flex-shrink-0 w-full min-w-0 px-2 flex flex-col items-center justify-center"
+                                key={`slide-${index}-${item.image}`}>
+                                <img
+                                    src={item.image}
+                                    alt={item.caption}
+                                    className="max-h-[70vh] max-w-full object-contain shadow-2xl rounded-lg"
+                                />
+                                {item.caption && (
+                                    <div className="mt-4 text-center w-full">
+                                        <h3 className="text-lg font-light text-white">
+                                            {item.caption}
+                                        </h3>
                                     </div>
-                                </div>
-                            )
-                        )}
+                                )}
+                            </div>
+                        ))}
                     </div>
                 </div>
 

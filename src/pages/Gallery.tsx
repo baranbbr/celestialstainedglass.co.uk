@@ -2,12 +2,11 @@ import { useState } from 'react';
 import galleryImages from '../data/manual.json';
 import { Carousel } from '../components/Carousel';
 
-type GalleryImage = { image: string; caption: string };
 const images: GalleryImage[] = galleryImages as GalleryImage[];
 export default function Gallery() {
     // Map gallery image objects to gallery item objects
     const base = import.meta.env.BASE_URL || '/';
-    const galleryItems = images.map((img: GalleryImage) => ({
+    const galleryItems: GalleryImage[] = images.map((img: GalleryImage) => ({
         image: `${base}glass/${img.image}`,
         caption: img.caption,
     }));
@@ -37,11 +36,11 @@ export default function Gallery() {
                     {galleryItems.map((item, index) => (
                         <div
                             key={`gallery-item-${index}`} // Added unique key
-                            className="group cursor-pointer"
+                            className="group"
                             style={{
                                 animationDelay: `${index * 50}ms`,
                             }}>
-                            <div className="aspect-[3/4] overflow-hidden bg-gray-100 dark:bg-gray-800 mb-4">
+                            <div className="aspect-[3/4] overflow-hidden bg-gray-100 dark:bg-gray-800 mb-4 cursor-pointer">
                                 <img
                                     src={item.image}
                                     alt={item.caption}
