@@ -94,13 +94,13 @@ export default function Home() {
 			<section className="w-full min-h-[300px] max-h-[600px] flex flex-col-reverse md:flex-row bg-gray-100 dark:bg-[#b3b38b] transition-colors px-0 md:px-0 overflow-hidden">
 				<div className="w-full md:w-1/2 h-72 md:h-full flex items-stretch">
 					<img
-						src={`${import.meta.env.BASE_URL || '/'}/about.jpeg`}
+						src={`${import.meta.env.BASE_URL || '/'}about.jpeg`}
 						alt="Me working on stained glass"
 						className="w-full h-full object-cover object-top"
 					/>
 				</div>
 				<div className="flex flex-col justify-center items-center md:items-start w-full md:w-1/2 px-6 py-16 md:py-0 md:pl-24">
-					<h2 className="text-4xl md:text-3xl font-light mb-8 text-[#541818] text-left w-full">
+					<h2 className="text-4xl md:text-3xl font-light mb-8 text-[#541818] text-center md:text-left w-full">
 						A bit about me
 					</h2>
 					<p className="text-gray-600 dark:text-white font-light leading-relaxed max-w-xl text-left">
@@ -115,10 +115,15 @@ export default function Home() {
 			{/* Contact Section */}
 			<section className="mt-6 py-16 md:px-6">
 				<div className="md:flex md:flex-col md:items-center md:mx-auto">
-					<div className="bg-gray-100 dark:bg-[#b3b38b]/80 p-8 flex flex-col gap-4 md:rounded-2xl md:shadow-xl items-center text-[rgb(84,24,24)]">
-						<h2 className="text-4xl md:text-3xl text-center font-light mb-8 text-[#541818]">
+					<div className="bg-gray-100 dark:bg-[#b3b38b] p-8 flex flex-col gap-4 md:rounded-2xl md:shadow-xl items-center text-[rgb(84,24,24)]">
+						<h2 className="text-4xl md:text-3xl text-center font-light text-[#541818]">
 							Get in touch
 						</h2>
+						<div className="w-full max-w-md">
+							<p className="text-base text-gray-700 dark:text-white text-center py-3">
+								Call for a free quote on any size job.
+							</p>
+						</div>
 						<div className="flex items-center gap-4 w-full max-w-md">
 							{/* Instagram Icon */}
 							<span className="inline-flex items-center justify-center w-8 h-8">
@@ -228,14 +233,9 @@ export default function Home() {
 							</span>
 							<a
 								href="mailto:celestialstainedglass@googlemail.com"
-								className="hover:text-gray-500 text-sm md:text-lg dark:text-white dark:hover:text-gray-100 transition-colors font-light">
+								className="hover:text-gray-500 md:text-lg dark:text-white dark:hover:text-gray-100 transition-colors font-light">
 								celestialstainedglass@googlemail.com
 							</a>
-						</div>
-						<div className="w-full max-w-md">
-							<p className="text-base text-gray-700 dark:text-white mt-6 text-center py-3">
-								Call for a free quote on any size job.
-							</p>
 						</div>
 					</div>
 				</div>
