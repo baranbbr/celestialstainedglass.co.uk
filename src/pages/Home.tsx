@@ -91,24 +91,34 @@ export default function Home() {
 			</section>
 
 			{/* About Section */}
-			<section className="py-16 px-6 bg-gray-100 dark:bg-[#b3b38b] transition-colors">
-				<div className="max-w-4xl mx-auto text-center">
-					<p className="text-lg text-gray-600 dark:text-white font-light leading-relaxed">
+			<section className="w-full min-h-[300px] max-h-[600px] flex flex-col-reverse md:flex-row bg-gray-100 dark:bg-[#b3b38b] transition-colors px-0 md:px-0 overflow-hidden">
+				<div className="w-full md:w-1/2 h-72 md:h-full flex items-stretch">
+					<img
+						src="/about.jpeg"
+						alt="Me working on stained glass"
+						className="w-full h-full object-cover object-top"
+					/>
+				</div>
+				<div className="flex flex-col justify-center items-center md:items-start w-full md:w-1/2 px-6 py-16 md:py-0 md:pl-24">
+					<h2 className="text-4xl md:text-3xl font-light mb-8 text-[#541818] text-left w-full">
+						A bit about me
+					</h2>
+					<p className="text-gray-600 dark:text-white font-light leading-relaxed max-w-xl text-left">
 						With over a decade of experience in traditional stained
 						glass techniques, each piece is carefully crafted to
 						capture and transform natural light into breathtaking
-						displays of color and form.
+						displays of colour and form.
 					</p>
 				</div>
 			</section>
 
 			{/* Contact Section */}
-			<section className="py-16 md:px-6">
+			<section className="mt-6 py-16 md:px-6">
 				<div className="md:flex md:flex-col md:items-center md:mx-auto">
-					<h2 className="text-3xl md:text-4xl text-center font-light mb-8 text-[#541818]">
-						Get in Touch
-					</h2>
 					<div className="bg-gray-100 dark:bg-[#b3b38b]/80 p-8 flex flex-col gap-4 md:rounded-2xl md:shadow-xl items-center text-[rgb(84,24,24)]">
+						<h2 className="text-4xl md:text-3xl text-center font-light mb-8 text-[#541818]">
+							Get in touch
+						</h2>
 						<div className="flex items-center gap-4 w-full max-w-md">
 							{/* Instagram Icon */}
 							<span className="inline-flex items-center justify-center w-8 h-8">
@@ -142,14 +152,29 @@ export default function Home() {
 									/>
 								</svg>
 							</span>
-							<a
-								href="https://www.instagram.com/celestialstainedglass"
-								target="_blank"
-								rel="noopener noreferrer"
-								className="hover:text-gray-500 dark:text-white dark:hover:text-gray-100 transition-colors text-lg font-light">
-								@celestialstainedglass
-							</a>
+							<div className="md:flex md:items-center md:gap-4">
+								<a
+									href="https://www.instagram.com/celestialstainedglass"
+									target="_blank"
+									rel="noopener noreferrer"
+									className="hover:text-gray-500 dark:text-white dark:hover:text-gray-100 transition-colors text-lg font-light">
+									@celestialstainedglass
+								</a>
+							</div>
 						</div>
+						{/* insta qr code */}
+						<a
+							href="https://www.instagram.com/celestialstainedglass"
+							target="_blank"
+							title="Click to open @celestialstainedglass on Instagram"
+							rel="noopener noreferrer"
+							className="hover:scale-110 transition-transform">
+							<img
+								src="/insta-celestial-qr.png"
+								alt="@celestialstainedglass Instagram QR Code"
+								className="h-56 w-56 md:w-32 md:h-32"
+							/>
+						</a>
 						<div className="flex items-center gap-4 w-full max-w-md">
 							{/* Phone Icon */}
 							<span className="inline-flex items-center justify-center w-8 h-8">
@@ -213,6 +238,12 @@ export default function Home() {
 					</div>
 				</div>
 			</section>
+			<footer className="w-full py-6 bg-gray-100 dark:bg-[#b3b38b] text-center text-sm text-gray-600 dark:text-white font-light">
+				<p>
+					&copy; {new Date().getFullYear()} Celestial Stained Glass.
+					All rights reserved.
+				</p>
+			</footer>
 		</div>
 	);
 }
