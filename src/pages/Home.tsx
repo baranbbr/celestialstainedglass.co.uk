@@ -91,8 +91,8 @@ export default function Home() {
 			</section>
 
 			{/* About Section */}
-			<section className="w-full min-h-[300px] max-h-[600px] flex flex-col-reverse md:flex-row bg-gray-100 dark:bg-[#b3b38b] transition-colors px-0 md:px-0 overflow-hidden">
-				<div className="w-full md:w-1/2 h-72 md:h-full flex items-stretch">
+			<section className="w-full min-h-[300px] md:max-h-[600px] flex flex-col-reverse md:flex-row bg-gray-100 dark:bg-[#b3b38b] transition-colors px-0 md:px-0 overflow-hidden">
+				<div className="w-full md:w-1/2 md:h-full flex items-stretch">
 					<img
 						src={`${import.meta.env.BASE_URL || '/'}about.jpeg`}
 						alt="Me working on stained glass"
