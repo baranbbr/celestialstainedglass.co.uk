@@ -7,21 +7,21 @@ import Image3 from '/glass/PHOTO-2025-09-30-12-12-12.jpg';
 export default function Home() {
 	const featuredWorks = [
 		{
-			title: '1920s Design',
-			image: Image1,
-			description: 'A beautiful stained glass window.',
-		},
-		{
-			title: 'Modern Classic',
-			image: Image2,
-			description:
-				'An intricate design based on classical geometric patterns.',
-		},
-		{
 			title: 'Victorian Window',
 			image: Image3,
 			description:
+				'An intricate design based on classical geometric patterns',
+		},
+		{
+			title: 'Edwardian Design',
+			image: Image2,
+			description:
 				'A stunning display of light and colour through glass.',
+		},
+		{
+			title: 'Modern Classic',
+			image: Image1,
+			description: 'A beautiful stained glass window.',
 		},
 	];
 	const [isGalleryOpen, setIsGalleryOpen] = useState(false);
@@ -104,10 +104,21 @@ export default function Home() {
 						A bit about me
 					</h2>
 					<p className="text-gray-600 dark:text-white font-light leading-relaxed max-w-xl text-left">
-						With over a decade of experience in traditional stained
-						glass techniques, each piece is carefully crafted to
-						capture and transform natural light into breathtaking
-						displays of colour and form.
+						I've been the owner of Celestial Stained Glass since
+						2002. Specialising in the design, production,
+						restoration and installation of traditional stained
+						glass windows. Previous to working on my own, I worked
+						in other professional stained glass studios working on
+						commissions for colleagues.
+						<br />
+						<br />
+						Since 1997, I have been creating stained glass windows
+						for private homes and have also been commissioned to
+						design and produce pieces for churches in South Africa
+						and London. I continue to create and restore original
+						stained glass windows for both churches and homes across
+						North London. I'm passionate about what I do and have a
+						deep interest in this craft and art form.
 					</p>
 				</div>
 			</section>
