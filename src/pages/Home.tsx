@@ -7,21 +7,20 @@ import Image3 from '/glass/PHOTO-2025-09-30-12-12-12.jpg';
 export default function Home() {
 	const featuredWorks = [
 		{
-			title: 'Victorian Window',
+			title: 'Victorian Windows',
 			image: Image3,
-			description:
-				'An intricate design based on classical geometric patterns',
+			description: 'An intricate design based on Victorian patterns.',
 		},
 		{
-			title: 'Edwardian Design',
+			title: 'Edwardian Windows',
 			image: Image2,
 			description:
 				'A stunning display of light and colour through glass.',
 		},
 		{
-			title: 'Modern Classic',
+			title: 'Classic Modern Style Windows',
 			image: Image1,
-			description: 'A beautiful stained glass window.',
+			description: 'A beautiful classic modern stained glass window.',
 		},
 	];
 	const [isGalleryOpen, setIsGalleryOpen] = useState(false);
