@@ -5,9 +5,8 @@ import { Carousel } from '../components/Carousel';
 const images: GalleryImage[] = galleryImages as GalleryImage[];
 export default function Gallery() {
 	// Map gallery image objects to gallery item objects
-	const base = import.meta.env.BASE_URL || '/';
 	const galleryItems: GalleryImage[] = images.map((img: GalleryImage) => ({
-		image: `${base}glass/${img.image}`,
+		image: `/glass/${img.image}`,
 		caption: img.caption,
 	}));
 	console.log('Gallery items:', galleryItems);

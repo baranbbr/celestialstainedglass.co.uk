@@ -93,7 +93,7 @@ export default function Home() {
 			<section className="w-full min-h-[300px] md:max-h-[600px] flex flex-col-reverse md:flex-row bg-gray-100 dark:bg-[#b3b38b] transition-colors px-0 md:px-0 overflow-hidden">
 				<div className="w-full md:w-1/2 md:h-full flex items-stretch">
 					<img
-						src={`${import.meta.env.BASE_URL || '/'}about.jpeg`}
+						src={'/about.jpeg'}
 						alt="Me working on stained glass"
 						className="w-full h-full object-cover object-top"
 					/>
@@ -185,9 +185,7 @@ export default function Home() {
 							rel="noopener noreferrer"
 							className="hover:scale-110 transition-transform">
 							<img
-								src={`${
-									import.meta.env.BASE_URL || '/'
-								}insta-celestial-qr.png`}
+								src={'/insta-celestial-qr.png'}
 								alt="@celestialstainedglass Instagram QR Code"
 								className="h-56 w-56 md:w-32 md:h-32"
 							/>
