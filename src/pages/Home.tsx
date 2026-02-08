@@ -1,6 +1,7 @@
 import { Carousel } from '../components/Carousel';
 import { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
+import ShowMap from '../components/ShowMap';
 import Image1 from '/glass/PHOTO-2025-09-30-12-07-29 4.jpg';
 import Image2 from '/glass/PHOTO-2025-09-30-12-12-07.jpg';
 import Image3 from '/glass/PHOTO-2025-09-30-12-12-12.jpg';
@@ -71,10 +72,10 @@ export default function Home() {
 							<span className="text-sm font-semibold text-[rgb(84,24,24)] tracking-widest">
 								RESTORATION
 							</span>
-							<span className="text-muted-foreground font-serif">
+							<span className="text-muted-foreground font-serif hidden md:inline">
 								•
 							</span>
-							<span className="text-sm font-semibold text-[rgb(84,24,24)] tracking-widest">
+							<span className="text-sm font-semibold text-[rgb(84,24,24)] tracking-widest hidden md:inline">
 								INSTALLATION
 							</span>
 						</div>
@@ -133,8 +134,11 @@ export default function Home() {
 						A bit about me
 					</h2>
 					<p className="text-gray-600 dark:text-white font-light leading-relaxed max-w-xl text-left">
-						I've been the owner of Celestial Stained Glass since
-						2002. Specialising in the design, production,
+						I've been the owner of{' '}
+						<span className="font-medium">
+							Celestial Stained Glass
+						</span>{' '}
+						since 2002. Specialising in the design, production,
 						restoration and installation of traditional stained
 						glass windows. Previous to working on my own, I worked
 						in other professional stained glass studios working on
@@ -148,14 +152,14 @@ export default function Home() {
 						stained glass windows for both churches and homes across
 						North London.
 						<br /> <br /> I'm passionate about what I do and have a
-						deep interest in the craft and art.
+						deep interest in the art and craft.
 					</p>
 				</div>
 			</section>
 
-			{/* Contact Section */}
-			<section id="contact" className="mt-6 py-16 md:px-6">
-				<div className="md:flex md:flex-col md:items-center md:mx-auto">
+			{/* Contact Card Section */}
+			<section id="contact" className="mt-6 md:py-16 md:px-36">
+				<div className="md:flex md:items-stretch md:mx-auto gap-8">
 					<div className="bg-gray-100 dark:bg-[#b3b38b] p-8 flex flex-col gap-4 md:rounded-2xl md:shadow-xl items-center text-[rgb(84,24,24)]">
 						<h2 className="text-4xl md:text-3xl text-center font-light text-[#541818]">
 							Get in touch
@@ -275,6 +279,21 @@ export default function Home() {
 								className="hover:text-gray-500 md:text-lg dark:text-white dark:hover:text-gray-100 transition-colors font-light">
 								celestialstainedglass@googlemail.com
 							</a>
+						</div>
+					</div>
+					<div className="bg-gray-100 dark:bg-[#b3b38b] p-8 flex flex-col h-[70vh] md:h-auto gap-4 md:rounded-2xl md:shadow-xl items-center text-[rgb(84,24,24)] md:flex-1">
+						<h2 className="text-4xl md:text-3xl text-center font-light text-[#541818]">
+							Location
+						</h2>
+						<p className="text-gray-600 dark:text-white font-light leading-relaxed max-w-xl text-center">
+							I'm based in North London, near Bounds Green
+							station. My studio is located at: <br />
+							<span className="font-medium underline">
+								91 Trinity Rd, North London, N22 8YB.
+							</span>
+						</p>
+						<div className="flex-1 w-full min-h-80">
+							<ShowMap />
 						</div>
 					</div>
 				</div>
