@@ -1,5 +1,6 @@
 import { Carousel } from '../components/Carousel';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { useLocation } from 'react-router-dom';
 import Image1 from '/glass/PHOTO-2025-09-30-12-07-29 4.jpg';
 import Image2 from '/glass/PHOTO-2025-09-30-12-12-07.jpg';
 import Image3 from '/glass/PHOTO-2025-09-30-12-12-12.jpg';
@@ -25,6 +26,16 @@ export default function Home() {
 	];
 	const [isGalleryOpen, setIsGalleryOpen] = useState(false);
 	const [initialSlideIndex, setInitialSlideIndex] = useState(0);
+	const location = useLocation();
+	// when we navigated here with state.scrollToContact scroll to contact section
+	useEffect(() => {
+		if (location.state?.scrollToContact) {
+			document
+				.getElementById('contact')
+				?.scrollIntoView({ behavior: 'smooth' });
+		}
+	}, [location.state]);
+
 	return (
 		<div className="min-h-screen">
 			{/* Hero Section */}
@@ -39,15 +50,34 @@ export default function Home() {
 							}}>
 							Celestial Stained Glass
 						</h1>
-						<p className="text-lg md:text-xl text-gray-600 dark:text-white font-light max-w-2xl mx-auto">
+						<p className="text-lg md:text-xl text-gray-600 dark:text-white font-light max-w-2xl mx-auto mb-2 md:mb-6">
 							Specialising in traditional English styles,
 							Victorian, Edwardian, Art Deco, 1930s, 1940s and
 							contemporary designs.
 						</p>
-						{/* bold words */}
-						<span className="font-bold text-[rgb(84,24,24)]">
-							DESIGN, FABRICATION, RESTORATION, INSTALLATION
-						</span>
+						<div className="flex flex-wrap justify-center gap-3 pt-4 text-center">
+							<span className="text-sm font-semibold text-[rgb(84,24,24)] tracking-widest">
+								DESIGN
+							</span>
+							<span className="text-muted-foreground font-serif">
+								•
+							</span>
+							<span className="text-sm font-semibold text-[rgb(84,24,24)] tracking-widest">
+								FABRICATION
+							</span>
+							<span className="text-muted-foreground font-serif">
+								•
+							</span>
+							<span className="text-sm font-semibold text-[rgb(84,24,24)] tracking-widest">
+								RESTORATION
+							</span>
+							<span className="text-muted-foreground font-serif">
+								•
+							</span>
+							<span className="text-sm font-semibold text-[rgb(84,24,24)] tracking-widest">
+								INSTALLATION
+							</span>
+						</div>
 					</div>
 
 					{/* Featured Works Grid */}
@@ -56,7 +86,7 @@ export default function Home() {
 							<div
 								key={work.title}
 								className="group cursor-pointer">
-								<div className="aspect-[3/4] overflow-hidden bg-gray-100 dark:bg-gray-800 mb-4">
+								<div className="aspect-3/4 overflow-hidden bg-gray-100 dark:bg-gray-800 mb-4">
 									<img
 										src={work.image}
 										alt={work.title}
@@ -116,14 +146,15 @@ export default function Home() {
 						design and produce pieces for churches in South Africa
 						and London. I continue to create and restore original
 						stained glass windows for both churches and homes across
-						North London. I'm passionate about what I do and have a
-						deep interest in this craft and art form.
+						North London.
+						<br /> <br /> I'm passionate about what I do and have a
+						deep interest in the craft and art.
 					</p>
 				</div>
 			</section>
 
 			{/* Contact Section */}
-			<section className="mt-6 py-16 md:px-6">
+			<section id="contact" className="mt-6 py-16 md:px-6">
 				<div className="md:flex md:flex-col md:items-center md:mx-auto">
 					<div className="bg-gray-100 dark:bg-[#b3b38b] p-8 flex flex-col gap-4 md:rounded-2xl md:shadow-xl items-center text-[rgb(84,24,24)]">
 						<h2 className="text-4xl md:text-3xl text-center font-light text-[#541818]">

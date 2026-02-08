@@ -21,7 +21,19 @@ export default function Navigation() {
 					</Link>
 					<div className="flex gap-8 justify-between">
 						<Link
+							id="home-link"
 							to="/"
+							onClick={() =>
+								// if current page is home, scroll to top
+								{
+									if (currentPage === 'home') {
+										window.scrollTo({
+											top: 0,
+											behavior: 'smooth',
+										});
+									}
+								}
+							}
 							className={`text-sm tracking-wide transition-opacity dark:text-white ${
 								currentPage === 'home'
 									? 'opacity-100 font-medium'
@@ -37,6 +49,13 @@ export default function Navigation() {
 									: 'opacity-50 hover:opacity-100'
 							}`}>
 							Gallery
+						</Link>
+						<Link
+							id="contact-link"
+							to="/"
+							className="text-sm tracking-wide transition-opacity dark:text-white opacity-50 hover:opacity-100"
+							state={{ scrollToContact: true }}>
+							Contact
 						</Link>
 					</div>
 				</div>
